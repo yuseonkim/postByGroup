@@ -8,15 +8,26 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <titlle>회원가입</titlle>
+    <title>회원가입</title>
 </head>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
+    function fn_dbCheckId(){
+        var joinForm = document.joinForm;
+        var id = joinForm.id.value();
+        if(id.length ==0 || id==""){
+            alert("아이디를 입력해주세여");
+            joinForm.id.focus();
+        }else{
+            window.open("${contextPath}/member/dbCheckId.do?user_id="+id,"","width=500,height=300");
+        }
+    }
     function fn_joinMember() {
+
         var joinForm = document.joinForm;
         var name = joinForm.name.value;
         var grade = joinForm.grade.value;
-        var deaprt = joinForm.depart.value;
+        var depart = joinForm.depart.value;
         var id = joinForm.id.value;
         var rePwd = joinForm.rePwd.value;
 
@@ -26,7 +37,7 @@
         } else if (grade.length == 0 || name == "") {
             alert("학년을 입력해주세요");
             joinForm.grade.focus();
-        } else if (depart.lengh == 0 || deaprt == "") {
+        } else if (depart.lengh == 0 || depart == "") {
             alert("소속을 입력해주세요");
             joinForm.depart.focus();
         } else if (id.length == 0 || id == "") {
@@ -49,10 +60,11 @@
         }
 
             }
+
 </script>
 <body>
-<form action="./register.jsp">
-    <p>이름</p> : <input type="text" name="name"><input type="button" onclick="fd">
+<form method="post" action="./register.jsp" name="joinForm">
+    <p>이름</p> : <input type="text" name="name">
     <p>학년</p> : <input type="text" name="grade"><br>
     <p>학과</p> : <input type="text" name="depart">
     <p>ID</p> : <input type="text" name="id" onkeydown="inputIdChck()">
@@ -61,6 +73,7 @@
     <input type="hidden" name="idDuplication" value="idUncheck"/>
     <p>PW</p> : <input type="text" name="pwd"><br>
     <p>PW재입력</p> : <input type="text" name="rePwd"><br>
+    <input type="submit" value="확인" onclick="fn_joinMember();">
 
 </form>
 
