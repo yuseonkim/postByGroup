@@ -18,6 +18,7 @@
       <input type="text" value="비밀번호" name="pw"><br>
       <input type="submit" value="로그인">
     </form>
+      <a href="./register.jsp">회원가입</a>
   </div>
 </section>
 <nav>

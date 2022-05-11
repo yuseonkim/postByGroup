@@ -5,6 +5,6 @@
 
 </head>
 <body>
-    ${member.name}
+
 </body>
 </html>
