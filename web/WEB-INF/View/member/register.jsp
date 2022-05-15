@@ -19,7 +19,7 @@
             alert("아이디를 입력해주세여");
             joinForm.id.focus();
         } else {
-            window.open("member/idCheck?id=" + id, "", "width=500,height=300");
+            window.open("${contextPath}/member/idCheck?id=" + id, "", "width=500,height=300");
 
         }
     }
@@ -90,7 +90,7 @@
     <p>학과</p> :
     <input type="text" name="depart">
     <p>ID</p> : <input type="text" name="id" onkeydown="inputIdChk()">
-    <input type="button" value="중복확인" onclick="openCheckId()">
+    <input type="button" value="중복확인" name="dbCheckId" onclick="openCheckId()">
     <input type="hidden" name="idDuplication" value="idUncheck">
     <p>PW</p> : <input type="text" name="pwd"><br>
     <p>PW재입력</p> : <input type="text" name="rePwd"><br>
