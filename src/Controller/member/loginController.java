@@ -1,4 +1,4 @@
-package Controller;
+package Controller.member;
 import Entity.member;
 import Service.loginService;
 import javax.servlet.ServletException;
