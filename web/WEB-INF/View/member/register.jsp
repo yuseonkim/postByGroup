@@ -31,6 +31,7 @@
         var grade = joinForm.grade.value;
         var depart = joinForm.depart.value;
         var id = joinForm.id.value;
+        var pwd = joinForm.pwd.value;
         var rePwd = joinForm.rePwd.value;
 
         if (name.length == 0 || name == "") {
@@ -49,20 +50,26 @@
             alert("아이디를 입력해주세요. ");
             joinForm.id.focus();
             return false;
-        } else if (joinForm.idDuplication.value != "idCheck") {
-            alert("아이디 중복체크를 해주세요. ");
-            return false;
         } else if (pwd.length == 0 || pwd == "") {
             alert("패스워드를 입력해주세요");
             joinForm.pwd.focus();
             return false;
+        } else if (pwd.length <= 6) {
+            alert("패스워드는 6자리 이상 입니다");
+            joinForm.pwd.focus();
+            return false;
+
         } else if (rePwd.length == 0 || rePwd == "") {
+
             alert("패스워드를 다시 입력해주세요");
-            joinForm.repwd.focus();
+            joinForm.rePwd.focus();
             return false;
         } else if (rePwd != pwd) {
             alert("입력하신 비밀번호가 틀립니다");
             joinForm.rePwd.focus()
+            return false;
+        } else if (joinForm.idDuplication.value != "idCheck") {
+            alert("아이디 중복체크를 해주세요. ");
             return false;
         } else {
             return true;
@@ -76,7 +83,7 @@
 
 </script>
 <body>
-<form method="post" action="./register" name="joinForm">
+<form method="post" action="/Success" name="joinForm">
     <p>이름</p> : <input type="text" name="name">
     <p>학년</p> :
     <label>
