@@ -5,6 +5,8 @@
 
 </head>
 <body>
-
+<div class="title">
+${mid}
+</div>
 </body>
 </html>

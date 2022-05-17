@@ -5,6 +5,9 @@
 
 </head>
 <body>
-
+<div class="title">
+${member.name}님 환영합니다
+</div>
+<div class=""
 </body>
 </html>

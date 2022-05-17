@@ -50,10 +50,6 @@
             alert("아이디를 입력해주세요. ");
             joinForm.id.focus();
             return false;
-        } else if (id.length <= 3) {
-            alert("아이디는 3자리 이상 입니다 ");
-            joinForm.id.focus();
-            return false;
         } else if (pwd.length == 0 || pwd == "") {
             alert("패스워드를 입력해주세요");
             joinForm.pwd.focus();
@@ -64,7 +60,7 @@
             return false;
 
         } else if (rePwd.length == 0 || rePwd == "") {
-        
+
             alert("패스워드를 다시 입력해주세요");
             joinForm.rePwd.focus();
             return false;

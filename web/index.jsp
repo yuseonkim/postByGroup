@@ -13,7 +13,7 @@
     <a href="index.jsp">프로젝트이름</a>
   </nav>
   <div>
-    <form action="${pageContext.request.contextPath}/main">
+    <form method ="post" action="${pageContext.request.contextPath}/login">
       <input type="text" value="아이디" name="id"><br>
       <input type="text" value="비밀번호" name="pw"><br>
       <input type="submit" value="로그인">

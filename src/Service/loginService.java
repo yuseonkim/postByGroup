@@ -7,7 +7,7 @@ import java.sql.*;
 public class loginService {
     public Boolean getloginResult(String id, String pw) {
         String url = "jdbc:mysql://localhost:3306/project";
-        String sql = "select pw from member where id = ?";
+        String sql = "select pwd from member where id = ?";
         Boolean Answer = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -16,7 +16,7 @@ public class loginService {
             st.setString(1, id);
             ResultSet rs = st.executeQuery();
             if (rs.next()) {
-                String pw_ = rs.getString("pw");
+                String pw_ = rs.getString("pwd");
                 if (pw.equals(pw_)) {
                     Answer = true;
                 } else
@@ -45,7 +45,7 @@ public class loginService {
             ResultSet rs = st.executeQuery();
             if (rs.next()) {
                 String id_ = rs.getString("id");
-                String pw_ = rs.getString("pw");
+                String pw_ = rs.getString("pwd");
                 int mid_ = rs.getInt("mid");
                 String name_ = rs.getString("name");
                 int grade_ = rs.getInt("grade");
