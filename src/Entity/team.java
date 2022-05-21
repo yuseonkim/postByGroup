@@ -2,12 +2,12 @@ package Entity;
 
 public class team {
     int tid;
-    String name;
+    String tname;
     int masterId;
 
     public team(int tid, String name, int masterId) {
         this.tid = tid;
-        this.name = name;
+        this.tname = name;
         this.masterId = masterId;
     }
 
@@ -28,11 +28,11 @@ public class team {
         this.masterId = masterId;
     }
 
-    public String getName() {
-        return name;
+    public String getTname() {
+        return tname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTname(String tname) {
+        this.tname = tname;
     }
 }

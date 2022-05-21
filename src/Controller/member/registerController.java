@@ -17,6 +17,7 @@ public class registerController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("utf-8");
         String name = req.getParameter("name");
         int grade = Integer.parseInt(req.getParameter("grade"));
         String depart = req.getParameter("depart");

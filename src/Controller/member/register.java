@@ -11,6 +11,7 @@ import java.io.IOException;
 public class register extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("utf-8");
         req.getRequestDispatcher("/WEB-INF/View/member/register.jsp").forward(req,resp);
     }
 

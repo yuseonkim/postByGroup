@@ -7,7 +7,7 @@ import java.sql.*;
 public class registerService {
 
     public int checkAllId(String id) {//중복확인메서드
-        String url = "jdbc:mysql://localhost:3306/project";
+        String url = "jdbc:mysql://localhost:3306/project?useUnicode=true&characterEncoding=utf-8";
         String sql = "select id from member where id= ?";
         int result = -1; //오류발생
         try {
@@ -32,7 +32,7 @@ public class registerService {
     }
 
     public int registerService(String name, int grade, String depart, String id, String pwd) {//중복확인메서드
-        String url = "jdbc:mysql://localhost:3306/project";
+        String url = "jdbc:mysql://localhost:3306/project?useUnicode=true&characterEncoding=utf-8";
         String sql = "insert into member(name,grade,depart,id,pwd) values(?,?,?,?,?)";
         int result = -1; //오류발생
         try {

@@ -16,6 +16,7 @@ public class mainController extends HttpServlet {
     게시글리스트
      */
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("utf-8");
         loginService service = new loginService();
         String id = req.getParameter("id");
         member a = service.getMemberInfo(id);
