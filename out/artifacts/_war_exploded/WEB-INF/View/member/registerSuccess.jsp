@@ -12,5 +12,6 @@
 </head>
 <body>
 가입완료 ^^
+<a href="/">로그인화면으로</a>
 </body>
 </html>
